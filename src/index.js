@@ -72,5 +72,7 @@ function createMarkupInfo(dataCountry){
  return countryInfo.insertAdjacentHTML('beforeend',markup);
 }
 
+// y
+
 
     
