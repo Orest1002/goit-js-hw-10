@@ -18,3 +18,20 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+img {
+  width: 120px;
+}
+input{
+  background-color: rgb(179, 174, 174);
+  border-radius: 8px;
+}
+.country-list{
+  background-color: #e9e6e6;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+  background-color: #e9e6e6;
+}
