@@ -26,8 +26,8 @@ function onSearch(evt){
       if (dataCountry.length > 10) {
         Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name.'
-        );
-      } else if (dataCountry.length >= 2 && dataCountry.length <= 10) {
+        )
+      }  else if (dataCountry.length >= 2 && dataCountry.length <= 10) {
         resetMarkup(countryList);
         createMarkupList(dataCountry);
         resetMarkup(countryInfo);
@@ -70,7 +70,7 @@ function createMarkupList(dataCountry) {
     const markup = dataCountry
       .map(({ name, flags,}) => { 
         return `<li>
-         <img src="${flags.svg}" alt="${name}">
+         <img src="${flags.svg}" alt="flag" />
         <h2>${name.official}</h2>
      </li>`;
       })
@@ -78,13 +78,11 @@ function createMarkupList(dataCountry) {
     return countryList.insertAdjacentHTML('beforeend', markup);
   }
 
-  function resetMarkup(el) {
-    el.innerHTML = ('');
- }
+ 
 function createMarkupInfo(dataCountry){
    markup = dataCountry.map(({ name, capital, population, flags, languages })=> {
     return `
-    <li><img src="${flags.svg}" alt="${name}" >
+    <li><img src="${flags.svg}" alt="flag" >
     <h2>${name.official}</h2>
     <h3>${capital}</h3>
     <p>${population}</p>
@@ -94,6 +92,9 @@ function createMarkupInfo(dataCountry){
  return countryInfo.insertAdjacentHTML('beforeend',markup);
 }
 
+function resetMarkup(el) {
+  el.innerHTML = '';
+}
 
 
 
