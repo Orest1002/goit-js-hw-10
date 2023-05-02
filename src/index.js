@@ -37,6 +37,7 @@ function onSearch(evt){
       }
     })
     .catch(() => {
+      createMarkupList(dataCountry);
       resetMarkup(countryList);
       resetMarkup(countryInfo);
       Notiflix.Notify.failure('Oops, there is no country with that name');
