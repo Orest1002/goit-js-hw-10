@@ -37,32 +37,12 @@ function onSearch(evt){
       }
     })
     .catch(() => {
-      createMarkupList(dataCountry);
+    
       resetMarkup(countryList);
       resetMarkup(countryInfo);
       Notiflix.Notify.failure('Oops, there is no country with that name');
     });
-    // fetchCountries(inputValue)
-    // .then(dataCountry => {
-    //   if (dataCountry.length > 10) {
-    //     Notiflix.Notify.info(
-    //       'Too many matches found. Please enter a more specific name.'
-    //     );
-    //   } else if (dataCountry.length >= 2 && dataCountry.length <= 10) {
-    //     resetMarkup(countryList);
-    //     createMarkupList(dataCountry);
-    //     resetMarkup(countryInfo);
-    //   } else {
-    //     resetMarkup(countryInfo);
-    //     createMarkupInfo(dataCountry);
-    //     resetMarkup(countryList);
-    //   }
-    // })
-    // .catch(() => {
-    //     resetMarkup(countryList);
-    //     resetMarkup(countryInfo);
-    //   Notiflix.Notify.failure('Oops, there is no country with that name');
-    // });
+
 
 }
 function createMarkupList(dataCountry) {
